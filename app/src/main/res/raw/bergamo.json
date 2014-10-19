@@ -1,6 +1,13 @@
 {
 	"city": "Bergamo",
 	"list": [
+	    {
+    			"name": "CASONCELLI DELLA BERGAMASCA",
+    			"tags": ["beef", "lunch", "dinner"],
+    			"description": "Homemade ravioli with beef and sometimes pork filling. Sauce is made from melted butter, pancetta, and sage",
+    			"address": "Via Broseta 58, 24100 Bergamo, Italy",
+    			"imgURL": "http://www.raviolificiopoker.it/img/ricette/casoncelli.jpg"
+    	},
 		{
 			"name": "CASONCELLI DELLA BERGAMASCA",
 			"tags": ["beef", "lunch", "dinner"],

@@ -30,7 +30,6 @@ public class ProfileActivity extends Activity {
         View view = stub.inflate();
 
         ImageView back = (ImageView) view.findViewById(R.id.header_back_btn);
-        TextView title = (TextView) view.findViewById(R.id.header_with_back_title);
 
         back.setOnClickListener(new Button.OnClickListener() {
 
@@ -39,8 +38,6 @@ public class ProfileActivity extends Activity {
                 ProfileActivity.this.finish();
             }
         });
-
-        title.setText("Profile");
 
     }
 }

@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.foodin.R;
@@ -54,32 +55,45 @@ public class ItemListAdapter extends BaseAdapter {
             LayoutInflater inflater = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             convertView = inflater.inflate(R.layout.item_list_row, null);
             viewHolder = new ItemViewHolder();
+            viewHolder.contentLayout = (RelativeLayout) convertView.findViewById(R.id.item_layout);
+            viewHolder.headerImage = (ImageView) convertView.findViewById(R.id.list_item_first_image);
             viewHolder.image = (ImageView) convertView.findViewById(R.id.list_item_image);
             viewHolder.name = (TextView) convertView.findViewById(R.id.list_item_name);
-            viewHolder.name.setTypeface(Fonts.getOpenSansItalic(mContext));
+            viewHolder.name.setTypeface(Fonts.getOpenSansRegular(mContext));
             convertView.setTag(viewHolder);
         } else {
             viewHolder = (ItemViewHolder) convertView.getTag();
         }
 
-        Picasso.with(mContext).load(mCity.getList().get(position).getImgURL()).into(viewHolder.image);
-        viewHolder.name.setText(mCity.getList().get(position).getName());
+        if(position == 0) {
+            viewHolder.headerImage.setVisibility(View.VISIBLE);
+            viewHolder.contentLayout.setVisibility(View.GONE);
+        } else {
+            viewHolder.headerImage.setVisibility(View.GONE);
+            viewHolder.contentLayout.setVisibility(View.VISIBLE);
+            Picasso.with(mContext).load(mCity.getList().get(position).getImgURL()).into(viewHolder.image);
+            viewHolder.name.setText(mCity.getList().get(position).getName());
 
-        convertView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(mContext, ItemDetail.class);
-                ItemPojo pojo = mCity.getList().get(position);
-                Log.d("SAN", "Clicked name : " + pojo.getName());
-                intent.putExtra("item_info", new Gson().toJson(pojo));
-                mContext.startActivity(intent);
-            }
-        });
+            convertView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent intent = new Intent(mContext, ItemDetail.class);
+                    ItemPojo pojo = mCity.getList().get(position);
+                    Log.d("SAN", "Clicked name : " + pojo.getName());
+                    intent.putExtra("item_info", new Gson().toJson(pojo));
+                    mContext.startActivity(intent);
+                }
+            });
+        }
+
+
 
         return convertView;
     }
 
     static class ItemViewHolder {
+        RelativeLayout contentLayout;
+        ImageView headerImage;
         ImageView image;
         TextView name;
     }

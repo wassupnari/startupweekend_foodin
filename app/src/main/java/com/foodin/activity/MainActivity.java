@@ -99,9 +99,6 @@ public class MainActivity extends Activity {
             }
         });
 
-//        TextView title = (TextView) view.findViewById(R.id.header_main_title);
-//        title.setText("San Francisco, CA");
-
     }
 
     public void setupUI() {

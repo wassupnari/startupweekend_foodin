@@ -9,8 +9,10 @@ import android.graphics.Typeface;
 public class Fonts {
 
     public static Typeface typefaceOpensansItalic = null;
+    public static Typeface typefaceOpensansRegular = null;
 
     public static final String opensansItalic = "fonts/OpenSans-Italic.ttf";
+    public static final String opensansRegular = "fonts/OpenSans-Regular.ttf";
 
     public static Typeface getOpenSansItalic(Context context) {
         try {
@@ -21,6 +23,17 @@ public class Fonts {
         }
 
         return typefaceOpensansItalic;
+    }
+
+    public static Typeface getOpenSansRegular(Context context) {
+        try {
+            if (typefaceOpensansRegular == null)
+                typefaceOpensansRegular = Typeface.createFromAsset(context.getAssets(), opensansRegular);
+        } catch (Exception ex) {
+            typefaceOpensansRegular = Typeface.DEFAULT;
+        }
+
+        return typefaceOpensansRegular;
     }
 
 }

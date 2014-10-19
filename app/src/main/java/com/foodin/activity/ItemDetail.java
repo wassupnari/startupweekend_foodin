@@ -67,7 +67,6 @@ public class ItemDetail extends Activity {
         View view = stub.inflate();
 
         ImageView back = (ImageView) view.findViewById(R.id.header_back_btn);
-        TextView title = (TextView) view.findViewById(R.id.header_with_back_title);
 
         back.setOnClickListener(new Button.OnClickListener() {
 
@@ -77,14 +76,19 @@ public class ItemDetail extends Activity {
             }
         });
 
-        title.setText(mItem.getName());
-
     }
 
     private void setupUI() {
         ImageView image = (ImageView) findViewById(R.id.detail_item_image);
+        TextView name = (TextView) findViewById(R.id.detail_item_name);
+        TextView desc = (TextView) findViewById(R.id.detail_item_desc);
+        TextView address = (TextView) findViewById(R.id.detail_address);
         Button share = (Button) findViewById(R.id.detail_item_share);
         mMap = (ImageView) findViewById(R.id.detail_item_map);
+
+        name.setText(mItem.getName());
+        desc.setText(mItem.getDescription());
+        address.setText(mItem.getAddress());
 
         Picasso.with(this).load(mItem.getImgURL()).into(image);
 

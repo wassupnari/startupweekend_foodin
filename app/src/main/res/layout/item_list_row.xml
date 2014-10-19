@@ -3,44 +3,63 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingTop="20dp"
     android:layout_marginBottom="20dp"
     android:background="@color/white">
 
     <ImageView
-        android:id="@+id/list_item_image"
-        android:layout_width="310dp"
-        android:layout_height="224dp"
-        android:scaleType="centerCrop"
-        android:layout_centerHorizontal="true"/>
+        android:id="@+id/list_item_first_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/main_header"
+        android:src="@drawable/brand_img"/>
 
     <RelativeLayout
+        android:id="@+id/item_layout"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_alignParentBottom="true">
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
 
         <ImageView
-            android:layout_width="match_parent"
+            android:id="@+id/list_item_image"
+            android:layout_width="310dp"
+            android:layout_height="224dp"
+            android:scaleType="centerCrop"
+            android:padding="1dp"
+            android:layout_centerHorizontal="true"
+            android:background="#787878"/>
+
+        <RelativeLayout
+            android:layout_width="310dp"
             android:layout_height="50dp"
-            android:layout_alignParentBottom="true"
-            android:background="#bfffffff"/>
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true">
 
-        <TextView
-            android:id="@+id/list_item_name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_alignParentLeft="true"
-            android:layout_marginLeft="25dp"/>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_alignParentBottom="true"
+                android:background="#bfffffff"/>
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="30dp"
-            android:layout_alignParentRight="true"
-            android:layout_marginRight="20dp"
-            android:layout_centerVertical="true"
-            android:src="@drawable/arrow_meal_home"/>
+            <TextView
+                android:id="@+id/list_item_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:textSize="17sp"
+                android:layout_marginLeft="25dp"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/arrow_meal_home"/>
         </RelativeLayout>
+
+        </RelativeLayout>
+
 
 
 </RelativeLayout>

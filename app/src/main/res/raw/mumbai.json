@@ -1,6 +1,13 @@
 {
 	"city": "Mumbai",
 	"list": [
+	    {
+            "name": "Batata Vada (Indian burger)",
+            "tags": ["lunch", "dinner"],
+            "description": "Spiced Potato Patties with Cilantro Chutney on Pull-apart Bread. Mumbaikars have the humble Batata Vada and its sibling, the Vada Pav for breakfast, lunch and dinner. Batata Vada is a scrumptious snack made by making balls of mashed potatoes, mixed with spices, dipping the balls in a chickpeas flour batter and deep-frying them. Golden and crispy on the outside, divinely delicious on the inside.",
+            "address": "_",
+            "imgURL": "http://spiceinthecity.files.wordpress.com/2013/07/dsc_0483.jpg?w=600&h=899"
+        },
 		{
 			"name": "Batata Vada (Indian burger)",
 			"tags": ["lunch", "dinner"],
