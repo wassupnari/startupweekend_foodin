@@ -1,0 +1,40 @@
+{
+	"city": "Bergamo",
+	"list": [
+		{
+			"name": "CASONCELLI DELLA BERGAMASCA",
+			"tags": ["beef", "lunch", "dinner"],
+			"description": "Homemade ravioli with beef and sometimes pork filling. Sauce is made from melted butter, pancetta, and sage",
+			"address": "Via Broseta 58, 24100 Bergamo, Italy",
+			"imgURL": "http://www.raviolificiopoker.it/img/ricette/casoncelli.jpg"
+		},
+		{
+			"name": "CAPRIOLO STUFATO CON POLENTA",
+			"tags": ["wild meat", "lunch", "dinner"],
+			"description": "Roe deer - local wild game with polenta and sometimes with mushrooms or some sort of veggie.",
+			"address": "Via Broseta 58, 24100 Bergamo, Italy",
+			"imgURL": "http://media-cdn.tripadvisor.com/media/photo-s/03/fe/d7/5c/hotel-ristorante-pineta.jpg"
+		},
+		{
+			"name": "POLENTA E OSEI",
+			"tags": ["snack"],
+			"description": "Sweet made with almond paste , chocolate and marzipan",
+			"address": "Via Broseta 58, 24100 Bergamo, Italy",
+			"imgURL": "http://upload.wikimedia.org/wikipedia/commons/7/7d/Polenta_e_osei_(dolce).jpg"
+		},
+		{
+			"name": "POLENTA E OSEI",
+			"tags": ["meat", "lunch", "dinner"],
+			"description": "Wild birds with polenta.",
+			"address": "Via Broseta 58, 24100 Bergamo, Italy",
+			"imgURL": "https://fbcdn-sphotos-h-a.akamaihd.net/hphotos-ak-prn2/1375790_455394857913780_2139937143_n.jpg"
+		},
+		{
+			"name": "CAVOLFIORE CON BRANZI E NOCI",
+			"tags": ["vegetarian", "lunch", "dinner"],
+			"description": "Cauliflower with melted cheese and nuts.",
+			"address": "Via Broseta 58, 24100 Bergamo, Italy",
+			"imgURL": "http://cdn.gingerandtomato.com/wp-content/uploads/2014/01/cavolfiore-gratinato-senza-besciamella.jpg"
+		}
+	]
+}

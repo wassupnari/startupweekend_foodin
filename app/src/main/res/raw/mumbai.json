@@ -1,0 +1,40 @@
+{
+	"city": "Mumbai",
+	"list": [
+		{
+			"name": "Batata Vada (Indian burger)",
+			"tags": ["lunch", "dinner"],
+			"description": "Spiced Potato Patties with Cilantro Chutney on Pull-apart Bread. Mumbaikars have the humble Batata Vada and its sibling, the Vada Pav for breakfast, lunch and dinner. Batata Vada is a scrumptious snack made by making balls of mashed potatoes, mixed with spices, dipping the balls in a chickpeas flour batter and deep-frying them. Golden and crispy on the outside, divinely delicious on the inside.",
+			"address": "_",
+			"imgURL": "http://spiceinthecity.files.wordpress.com/2013/07/dsc_0483.jpg?w=600&h=899"
+		},
+		{
+			"name": "Bhel Puri /Chaat",
+			"tags": ["snack"],
+			"description": "Bhelpuri is a savoury Indian snack, and is also a type of chaat. It is made out of puffed rice, vegetables and a tangy tamarind sauce. Bhelpuri is often identified with the beaches of Mumbai, such as Girguam or Juhu.",
+			"address": "_",
+			"imgURL": "http://asiasociety.org/files/bhelpuri_0.jpg"
+		},
+		{
+			"name": "Chole Bhature / Channa Bhatura",
+			"tags": ["breakfast"],
+			"description": "Chole bhature (Hindi: छोलेभटूरे, Punjabi: ਛੋਲੇਭਟੂਰੇ), is a combination of chole (spicy chick peas) and fried bread called bhatoora (made of maida flour).[1]accompanied with lassi. Chole bhature are served with onions, carrot pickle, green chutney and achaar. Chole Bhature is a breakfast invented in Delhi post partition and now a days, it is popular breakfast around north-west India and other parts of the Country. It is a heavy breakfast which is generally accompanied with lassi. Chole bhature are served with onions, carrot pickle, green chutney and achaar. Chole Bhature is a breakfast invented in Delhi post partition and now a days, it is popular breakfast around north-west India and other parts of the Country.",
+			"address": "_",
+			"imgURL": "http://atlantaautocareandrepair.com/wp-content/uploads/2012/01/ChloeBhatura.png"
+		},
+		{
+			"name": "Dosa",
+			"tags": ["vegetarian", "snack"],
+			"description": "Dosa is a fermented crepe or pancake made from rice batter and black lentils. It is a staple dish in South Indian states of Karnataka, Tamil Nadu, Andhra Pradesh and Kerala. It is also popular in other parts of India, and other countries like Sri Lanka, Malaysia and Singapore. Mumbai’s dosawaalas are known for the crazy combinations of ingredients that they serve with a dosa, and there’s no boundaries to how far they can go. From spicy potatoes to mixed veggies to noodles, these things can probably be eaten with ANYTHING.",
+			"address": "_",
+			"imgURL": "http://dosamatic.com/wp-content/uploads/2014/08/paper-dosa.jpg"
+		},
+		{
+			"name": "Chicken or Gobi Manchurian ( Indian Chinese )",
+			"tags": ["spicy", "dinner"],
+			"description": "Indian Chinese cuisine is the adaptation of Chinese seasoning and cooking techniques to Indian tastes. The Indian Chinese cuisine is said to have been developed by the small Chinese community that has lived in Kolkata (formerly Calcutta) for over a century. Marinated boneless chicken / cauliflower is deep fried and the golden balls are tossed with a cornflour based ginger-garlic concoction and garnished with a generous amount of spring onion greens. Pairs wonderfully with chowmein or fried rice.",
+			"address": "_",
+			"imgURL": "http://cdn.sailusfood.com/wp-content/uploads/2009/12/chicken-manchuria.jpg"
+		}
+	]
+}

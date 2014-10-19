@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="white">#ffffff</color>
+    <color name="header_line">#797979</color>
+    <color name="header_title">#41423e</color>
+</resources>
