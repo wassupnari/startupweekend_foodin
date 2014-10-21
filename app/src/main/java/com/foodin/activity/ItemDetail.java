@@ -8,8 +8,12 @@ import android.content.pm.ResolveInfo;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Point;
+import android.media.AudioManager;
+import android.media.MediaPlayer;
+import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Display;
 import android.view.View;
 import android.view.ViewStub;
@@ -21,6 +25,7 @@ import android.widget.TextView;
 
 import com.foodin.R;
 import com.foodin.pojo.ItemPojo;
+import com.foodin.utility.Fonts;
 import com.google.gson.Gson;
 import com.google.gson.JsonParser;
 import com.squareup.picasso.Picasso;
@@ -29,6 +34,7 @@ import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.DefaultHttpClient;
 
+import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
@@ -47,6 +53,8 @@ public class ItemDetail extends Activity {
     private ImageView mMap;
 
     private ItemPojo mItem;
+
+    private MediaPlayer audioPlayer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -83,6 +91,7 @@ public class ItemDetail extends Activity {
         TextView name = (TextView) findViewById(R.id.detail_item_name);
         TextView desc = (TextView) findViewById(R.id.detail_item_desc);
         TextView address = (TextView) findViewById(R.id.detail_address);
+        ImageView speaker = (ImageView) findViewById(R.id.detail_speaker);
         Button share = (Button) findViewById(R.id.detail_item_share);
         mMap = (ImageView) findViewById(R.id.detail_item_map);
 
@@ -119,6 +128,17 @@ public class ItemDetail extends Activity {
             }
         });
 
+        speaker.setOnClickListener(new ImageView.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Log.d("FOO", "sound clicked");
+                playSound();
+
+            }
+        });
+
+        name.setTypeface(Fonts.getOpenSansRegular(this));
+        desc.setTypeface(Fonts.getOpenSansRegular(this));
         loadStaticMap();
     }
 
@@ -163,5 +183,43 @@ public class ItemDetail extends Activity {
     public static int dpToPixel(Context context, double dp) {
         final double scale = context.getResources().getDisplayMetrics().density;
         return (int) (dp * scale + 0.5f);
+    }
+
+    public void playSound() {
+
+//        MediaPlayer mediaPlayer = MediaPlayer.create(this, R.raw.bergamo_address);
+//        mediaPlayer.start();
+        audioPlayer = new MediaPlayer();
+
+        Log.d("FOO", "before ");
+        try {
+            Uri uri = Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.bergamo_address);
+
+            //audioPlayer.reset();
+            audioPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC);
+            audioPlayer.setDataSource(ItemDetail.this, uri);
+            audioPlayer.prepare();
+            audioPlayer.start();
+            audioPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+
+                @Override
+                public void onCompletion(MediaPlayer mp) {
+                    Log.d("FOO", "play done");
+                    audioPlayer.stop();
+                    ItemDetail.this.finish();
+
+                }
+
+            });
+
+        } catch (IllegalArgumentException e) {
+            e.printStackTrace();
+        } catch (SecurityException e) {
+            e.printStackTrace();
+        } catch (IllegalStateException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }
